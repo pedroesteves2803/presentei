@@ -1,0 +1,713 @@
+// Container-devices
+$container-xl: 1440px;
+$container-l: 1140px;
+$container-m: 960px;
+$container-s: 540px;
+
+@mixin responsive($device) {
+    @if $device == xl {
+      // For resolutions upper 1440px
+      @media screen and (min-width: $container-xl) {
+        @content;
+      }
+    } @else if $device == l {
+      // For resolutions between 1140px and 1440px
+      @media screen and (max-width: $container-xl) and (min-width: $container-l) {
+        @content;
+      }
+    } @else if $device == m {
+      // For resolutions between 960px and 1440px
+      @media screen and (max-width: $container-l) and (min-width: $container-s) {
+        @content;
+      }
+    } @else if $device == s {
+      // For resolutions less than 960px
+      @media screen and (max-width: $container-m) {
+        @content;
+      }
+    } @else if $device == xs {
+      // For resolutions less than 540px
+      @media screen and (max-width: $container-s) {
+        @content;
+      }
+    }
+    
+  }
+
+
+.btn-custom {
+    text-decoration: none;
+    background-color: $red-light;
+    color: $white-light;
+
+    &:hover {
+        background-color: $red-dark;
+        color: $white-light;
+    }
+
+    &:focus {
+        border-color: #FF0000;
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6);
+    }
+
+    @include responsive(s){
+        height: 20px;
+        font-size: 10px;
+        line-height: 5px;
+        margin-bottom: 10px;
+    }
+}
+
+
+
+.banner {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/fundCasamento.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: mymove 40s infinite;
+
+    @include responsive(s){
+        height: 140vh;
+    }
+}
+
+.cabecalho-home{
+    width: 100%;
+    height: 100vh;
+    line-height: 100px;
+    // background: rgb(0, 0, 0) transparent;
+    background: rgba(83, 83, 83, 0.7);
+    display: inline-block;
+
+    @include responsive(s){
+        height: 140vh;
+    }
+}
+
+.listaDePresentes{
+
+    // border: 1px solid gold;
+    margin-top: 5%;
+
+    .txt{
+
+        text-align: center;
+    
+        h1{
+            padding: 25px 0 0 0;
+            font-size: 72px;
+            color: #B22222;
+            margin: 30px;
+
+                @include responsive(s){
+                    font-size: 30px;
+                }
+        }
+    
+        p{
+            font-size: 32px;
+            color: #FFFFFF;
+            line-height: 1em;
+            margin-bottom: 25px;
+
+            @include responsive(s){
+                font-size: 30px;
+            }
+        }
+
+    }
+
+
+}
+
+.botaoRolagem{
+    text-align: center;
+    margin-top: 75px;
+    cursor: pointer;
+    padding: 10px 10px;
+
+    .svg-setas{
+        width: 60px;
+        height: 60px;
+
+        @include responsive(s){
+            display: none;
+        }
+    }
+}
+
+h1{
+    .svg-icones {
+        width: 60px;
+        height: 60px;
+
+        @include responsive(s){
+            display: none;
+        }
+    }
+}
+
+.divOpcoes{
+
+    margin-top: 10%;
+    margin-bottom: 0;
+    overflow: none;
+
+    .opcoes {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+
+    }
+
+    @include responsive(s){
+        overflow: hidden;
+    }
+    
+}
+
+
+.escolher{
+    width: 40%;
+    height: 60%;
+    margin: 20px 0;
+    text-align: center;
+    float: left;
+    color: #B22222;
+    background-color: $white-light;
+    border: 1px solid #696969;
+    border-radius: 10px;
+
+    h1{
+        font-size: 28px;
+        padding-top: 20px ;
+
+        @include responsive(s){
+            font-size: 20px;
+        }
+    }
+
+    a{
+        text-decoration: none;
+        color: $red-dark;
+        padding: 5px;
+        transition: all 0.2s ease;
+    }
+
+    p{
+        font-size: 15px;
+        padding: 40px 0;
+        color: #696969;
+
+        @include responsive(s){
+            display: none;
+        }
+
+        @include responsive(m){
+            display: block;
+            padding: 0;
+            font-size: 12px;
+        }
+
+        @include responsive(l){
+            font-size: 20px;
+        }
+    }
+
+    a:hover{
+        color: $red;
+        border-bottom: 1px solid gray;
+    }
+
+    h2{
+        font-size: 22pt;
+        padding-bottom: 20px;
+
+        @include responsive(s){
+            font-size: 10px;
+        }
+    }
+
+    @include responsive(s){
+        height: 150px;
+    }
+}
+
+
+.presentear{
+    width: 40%;
+    height: 60%;
+    margin: 20px 0;
+    text-align: center;
+    float: left;
+    color: #B22222;
+    background-color: $white-light;
+    border: 1px solid #696969;
+    border-radius: 10px;
+
+    h1{
+        font-size: 28px;
+        padding-top: 20px ;
+
+        @include responsive(s){
+            font-size: 20px;
+        }
+    }
+
+    a{
+        text-decoration: none;
+        color: $red-dark;
+        padding: 5px;
+        transition: all 0.2s ease;
+    }
+
+    p{
+        font-size: 15px;
+        padding: 40px 0;
+        color: #696969;
+        width: 80%;
+        margin: 0 auto;
+
+        @include responsive(s){
+            display: none;
+        }
+
+        @include responsive(m){
+            display: block;
+            padding: 0;
+            font-size: 12px;
+        }
+
+        @include responsive(l){
+            font-size: 20px;
+        }
+    }
+
+    a:hover{
+        color: $red;
+        border-bottom: 1px solid gray;
+    }
+
+    h2{
+        font-size: 22pt;
+        padding-bottom: 20px;
+
+        @include responsive(s){
+            font-size: 10px;
+        }
+    }
+
+    @include responsive(s){
+        height: 150px;
+    }
+}
+
+
+/* FOOTER */
+
+footer{
+    width: 100%;
+    height: 50px;
+    margin: 0 auto;
+    background-color: #A52A2A;
+    display: inline-block;
+
+    @include responsive(s){
+        height: 100px;
+    }
+
+}
+
+
+
+// ========================== CADASTRO ==========================
+
+.titCadastro{
+    margin: 0 auto;
+    font-size: 36px;
+    color: rgb(178, 34, 34);
+    width: 35%;
+    padding: 10px;
+}
+
+.listaDeCadastro {
+    border-radius: 10px;
+    width: 1000px;
+    padding: 10px;
+    margin-top: 10%;
+    margin-bottom: 0;
+    background: rgba(190, 185, 185, 0.4);
+
+    .formCadastro{
+        height: 100vh;
+    }
+
+    a{
+        text-decoration: none;
+        font-size: 16px;
+        color: $white-light;
+        line-height: 1em;
+        margin-left: 10px;
+
+        @include responsive(s){
+            font-size: 35px;
+        }
+
+        &:hover{
+            color: $gray-1;
+        }
+    }
+
+    label {
+        line-height: 20px;
+        color: $white-light;
+        @include responsive(m){
+            margin-left: 5%;
+        }
+
+        @include responsive(s){
+            margin-left: 10%;
+            font-size: 15px;   
+
+        }
+    }
+
+    .possuoCadastro {
+        
+        @include responsive(s){
+            color:$white-light;
+            font-size: 15px;
+            margin-left: 15px;
+        }
+    }
+
+    input {
+        height: 50px;
+        padding: 10px;
+        margin: 0 auto;
+        @include responsive(m){
+            width: 30%;
+            
+        }
+    }
+    
+    @include responsive(s){
+        width: 250px;
+        height: 540px;
+    }
+
+    @include responsive(m){
+        width: 600px;
+    }
+
+    .text-erro{
+        font-size: 20px;
+        color: $red-dark;
+        
+
+        @include responsive(s){
+            font-size: 10px;
+            line-height: 10px;
+        }
+
+    }
+
+    .form-control {
+        background-color: $white-light;
+        
+        &:focus {
+            border-color: #FF0000;
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6);
+        }
+
+        @include responsive(s){
+            width: 190px;
+            height: 30px;
+        }
+    }
+
+    .btn-custom{
+        @include responsive(s){
+            margin-left: 15px;
+            display: block;
+        }
+    }
+
+    .form-erro{
+        width: 100%;
+        height: 50px;
+        padding: .375rem .75rem;
+        font-size: 1rem;
+        line-height: 1.5;
+        color: #495057;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 2px solid rgba(255, 0, 0, 0.6);
+        border-radius: .25rem;
+        transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+
+        &:focus {
+            border-color: #FF0000;
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6);
+        }
+
+        @include responsive(s){
+            width: 190px;
+            height: 30px;
+        }
+
+    }
+}
+
+.minhaConta {
+    border-radius: 20px;
+    width: 1000px;
+    padding: 10px;
+    margin-top: 10%;
+    margin-bottom: 0;
+    background: rgba(190, 185, 185, 0.4);
+
+    .btn-custom{
+        @include responsive(s){
+            margin-left: 10%;
+        }
+    }
+
+    .trocarSenha{
+        margin-top: 10px;
+    }
+
+    .formCadastro{
+        height: 100vh;
+    }
+
+        h1{
+            margin-left: 10px;
+            font-size: 28px;
+            padding-top: 20px;
+            color: $white-light;
+            border-bottom: 1px solid $red;
+           
+    
+            @include responsive(s){
+                font-size: 20px;
+            }
+        }
+
+    
+
+    a{
+        text-decoration: none;
+        font-size: 16px;
+        color: $white-light;
+        line-height: 1em;
+        margin-left: 10px;
+
+        @include responsive(s){
+            font-size: 30px;
+        }
+
+        &:hover{
+            color: $gray-1;
+        }
+    }
+
+    label {
+        line-height: 20px;
+        color: $white-light;
+        @include responsive(m){
+            margin-left: 5%;
+        }
+
+        @include responsive(s){
+            margin-left: 10%;
+        }
+    }
+
+    input {
+        height: 50px;
+        padding: 10px;
+        margin: 0 auto;
+        @include responsive(m){
+            width: 90%;
+            
+        }
+    }
+
+    .text-erro{
+        font-size: 20px;
+        color: $red-dark;
+    }
+
+    .form-control {
+        background-color: $white-light;
+        
+        &:focus {
+            border-color: #FF0000;
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6);
+        }
+    }
+
+    .form-erro{
+        width: 100%;
+        height: 50px;
+        padding: .375rem .75rem;
+        font-size: 1rem;
+        line-height: 1.5;
+        color: #495057;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 2px solid rgba(255, 0, 0, 0.6);
+        border-radius: .25rem;
+        transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+
+        &:focus {
+            border-color: #FF0000;
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6);
+        }
+
+    }
+    
+    @include responsive(s){
+        width: 300px;
+    }
+
+    @include responsive(m){
+        width: 500px;
+    }
+}
+
+.border {
+    border: 1px solid blue;
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+.navbar-light .navbar-toggler {
+    margin-left: 0%; 
+}
+
+}
+
+// ========================== LOGIN ==========================
+
+.text-erro-login{
+    font-size: 15px;
+    color: $white-light;
+    width: 100px;
+    line-height: 10px;
+
+    @include responsive(s){
+        font-size: 10px;
+        
+    }
+}
+
+.borderCustom {
+    border: 1px solid goldenrod;
+}
+
+.containerCustom {
+    height: 150px;
+}
+
+// ========================== LISTA DE PRESENTE ==========================
+
+.lista{
+    border-radius: 20px;
+    width: 1200px;
+    padding: 10px;
+    margin: 0 auto;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    background: rgba(190, 185, 185, 0.4);
+
+}
+
+.listaDePresente{
+    width: auto;
+    padding: 5px;
+    margin: 0 auto;
+
+
+
+    .iconesPresente{
+        margin: 0 auto;
+        width: 900px;
+        img{
+            width: 200px;
+            margin: 0 auto;            
+
+        }
+
+        .pngIconesPresente{
+            float: left;
+            width: 200px;
+            margin-left: 2%;
+        }
+
+        //limpar float da img
+        &:before,
+            &:after {
+                content: " "; /* 1 */
+                display: table; /* 2 */
+            }
+
+            &:after {
+                clear: both;
+            }
+
+            .btn-custom{
+                margin-top: 10%;
+                width: 200px;
+            }
+
+    }
+            .btn-custom{
+                margin-top: 10%;
+                width: 200px;
+            }
+
+
+}
+
+.propriaLista{
+    margin-top: 10px;
+    
+    p{
+        color: $white-light;
+        padding: 0 15px;
+        width: 69%;
+        margin: 0 auto;
+        font-size: 15px;
+    }
+
+    .btn-custom{
+        margin-left: 30%;
+        width: 40%;
+        margin-top: 0;
+    }
+
+}
+
+
+.carousel-control-prev,
+.carousel-control-next{
+    width: 80px;
+    height: 80px;
+    margin: auto 15%;
+    // margin-left: 10px;
+    border: 1px solid red;
+
+
+    .png-setas{
+        width: 40px;
+        height: 50px;
+        border: 1px solid rebeccapurple;
+    }
+
+}
+
+
