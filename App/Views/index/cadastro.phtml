@@ -14,13 +14,13 @@
 
                         <ul class="navbar-nav ml-auto"> <!--inicio ul-->
                             <li class="nav-item">
-                            <a href="/?login=login" class="nav-link">Login</a>
+                            <a href="/" class="nav-link">Login</a>
                             </li>
                             <li class="nav-item">
                             <a href="/cadastro" class="nav-link">Cadastro</a>
                             </li>
                             <li class="nav-item">
-                            <a href="/perguntasFrenquentes" class="nav-link">Perguntas Frequentes</a>
+                            <a href="/perguntasFrequentes" class="nav-link">Perguntas Frequentes</a>
                             </li>
                         </ul> <!--final ul-->
 
@@ -32,7 +32,6 @@
 
         </header> <!--final header-->
 
-    
                 
         <section class="container listaDeCadastro">
 
@@ -70,7 +69,7 @@
 
                         <div class="form-group col-md-6">
                         <label for="telefone">Telefone</label>
-                        <input type="text" maxlength="15" class="<?php if($this->view->txt['telefone'] == 1) {
+                        <input type="text" maxlength="14" class="<?php if($this->view->txt['telefone'] == 1) {
                             echo 'form-control form-erro';
                         } else {
                             echo 'form-control';
