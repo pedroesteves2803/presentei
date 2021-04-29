@@ -1,6 +1,6 @@
 const abrirLogin = document.querySelector("#abrir")
 const modal = document.querySelector("#modal")
-const fecharLogin = document.querySelector("#fechar")
+const fecharLogin = document.querySelector("#fechar") 
 
 abrirLogin.addEventListener("click", () =>{
     modal.classList.romove("hide")
