@@ -338,10 +338,10 @@ body {
     background-image: url(../img/fundCasamento.jpg);
   }
   24% {
-    background-image: url(../img/fundAniversario.jpeg);
+    background-image: url(../img/fundAniversario.jpg);
   }
   36% {
-    background-image: url(../img/fundAniversario.jpeg);
+    background-image: url(../img/fundAniversario.jpg);
   }
   48% {
     background-image: url(../img/fundBebe.jpg);
@@ -364,10 +364,10 @@ body {
     background-image: url(../img/fundCasamento.jpg);
   }
   24% {
-    background-image: url(../img/fundAniversario.jpeg);
+    background-image: url(../img/fundAniversario.jpg);
   }
   36% {
-    background-image: url(../img/fundAniversario.jpeg);
+    background-image: url(../img/fundAniversario.jpg);
   }
   48% {
     background-image: url(../img/fundBebe.jpg);
@@ -722,50 +722,6 @@ fieldset {
   text-decoration: underline;
 }
 
-/* Perguntas frequentes */
-
-
-.perguntasFrequentes{
-  width: 60%;
-  margin: 2em auto 5em auto;
-}
-
-#titPerguntas{
-  font-family: 'Indie Flower', cursive;
-  font-size: 62px;
-  font-weight: 500;
-  color: darkgray;
-}
-
-#subPerguntas{
-  font-family: 'Indie Flower', cursive;
-  font-weight: 500;
-  font-size: 36px;
-  color: darkgray;
-}
-
-.respostas{
-  color: gray;
-  text-align: justify;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 17px;
-  margin-bottom: 3px;
-  line-height: 22px;
-}
-
-.perguntasFrequentes #numeros{
-  margin: 10px;
-}
-
-.numerico{
-  color: gray;
-  text-align: justify;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 17px;
-  line-height: 22px;
-  list-style-type: decimal;
-}
-
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
   #txt h1 {
@@ -1006,9 +962,8 @@ fieldset {
 }
 
 .listaDePresentes .txt h1 {
-  padding-top: 35px;
-  font-size: 78px;
-  font-weight: bold;
+  padding: 25px 0 0 0;
+  font-size: 72px;
   color: #B22222;
   margin: 30px;
 }
@@ -1034,22 +989,14 @@ fieldset {
 
 .botaoRolagem {
   text-align: center;
-  margin-top: 32vh;
+  margin-top: 75px;
   cursor: pointer;
   padding: 10px 10px;
 }
 
 .botaoRolagem .svg-setas {
-  width: 34px;
-  height: 34px;
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-}
-
-
-.botaoRolagem .svg-setas:hover{
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
+  width: 60px;
+  height: 60px;
 }
 
 @media screen and (max-width: 960px) {
@@ -1684,7 +1631,6 @@ footer {
   width: 200px;
   height: 200px;
   margin: 50px 30px 0 15px;
-
 }
 
 @media screen and (max-width: 960px) {
@@ -1700,13 +1646,14 @@ footer {
 }
 
 .titulo {
+  /* float: left; */
   line-height: 50px;
   font-size: 22px;
   color: #FFFFFF;
+  font-weight: bold;
 }
 
 .titulo:hover {
-  text-decoration: none;
   color: #FFFFFF;
 }
 
@@ -1726,27 +1673,21 @@ footer {
   }
 }
 
-.navbar-light .navbar-nav{
-  border-bottom: white 2px solid;
-}
-
 .navbar-light .navbar-nav .nav-link {
   text-decoration: none;
   color: #FFFFFF;
   -webkit-transition: all 0.8s ease;
   transition: all 0.8s ease;
   position: relative;
-  height: 80px;
+  height: 90px;
 }
 
 .navbar-light .navbar-nav .nav-link:hover {
-  font-weight: 500;
-  font-size: 18px;
-  color: #ffffff;
-  font-weight: 500;
+  font-weight: bold;
+  color: #FFF;
   -webkit-transition: .5s ease;
-  transition: .5s ease; 
-  background: linear-gradient(359.94deg, #8b0000 0.06%, rgba(225, 28, 34, 0) 100%);
+  transition: .5s ease;
+  background: linear-gradient(359.94deg, #B21218 0.06%, rgba(225, 28, 33, 0) 101.91%);
 }
 
 .navbar-light .navbar-nav .nav-link:hover::before {
@@ -1801,9 +1742,9 @@ footer {
 }
 
 .olho {
-  width: 26px;
-  height: 26px;
-  margin: 4px 10px 0 0;
+  width: 30px;
+  height: 30px;
+  margin: 10px;
 }
 
 @media screen and (max-width: 960px) {
