@@ -74,6 +74,8 @@ class AppController extends Action {
 
 	}
 
+	//validar senha
+
 	public function atualizarSenhaUsuario() {
 		$this->validaAutenticacao();
 		$usuario = Container::getModel('Usuario');
