@@ -1718,6 +1718,121 @@ footer {
   }
 }
 
+.cabecalho-home-lista {
+  width: 100%;
+  height: 130vh;
+  line-height: 100px;
+  background: rgba(83, 83, 83, 0.7);
+  display: inline-block;
+}
+
+@media screen and (max-width: 960px) {
+  .cabecalho-home-lista {
+    height: 140vh;
+  }
+}
+
+.banner-lista {
+  width: 100%;
+  height: 130vh;
+  background-image: url(../img/fundCasamento.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-animation: mymove 40s infinite;
+          animation: mymove 40s infinite;
+}
+
+@media screen and (max-width: 960px) {
+  .banner-lista {
+    height: 140vh;
+  }
+}
+
+.criacaoLista {
+  border: 1px solid greenyellow;
+  width: 80%;
+  height: 84%;
+  margin-top: 30px;
+  padding: 10px;
+}
+
+.criacaoLista form {
+  border: 1px solid rebeccapurple;
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+}
+
+.criacaoLista form label {
+  line-height: 20px;
+  color: #F4F7FB;
+}
+
+@media screen and (max-width: 1140px) and (min-width: 540px) {
+  .criacaoLista form label {
+    margin-left: 5%;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .criacaoLista form label {
+    margin-left: 10%;
+    font-size: 15px;
+  }
+}
+
+.criacaoLista form input {
+  height: 50px;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1140px) and (min-width: 540px) {
+  .criacaoLista form input {
+    width: 90%;
+  }
+}
+
+.criacaoLista form .form-control {
+  background-color: #F4F7FB;
+}
+
+.criacaoLista form .form-control:focus {
+  border-color: #FF0000;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6);
+}
+
+.criacaoLista form p {
+  width: 100%;
+  line-height: 20px;
+  font-size: 14px;
+  color: #F4F7FB;
+}
+
+.criacaoLista form textarea {
+  min-height: 50px;
+  padding: 10px;
+  margin: 0 auto;
+  max-height: 100px;
+}
+
+@media screen and (max-width: 1140px) and (min-width: 540px) {
+  .criacaoLista form textarea {
+    width: 90%;
+  }
+}
+
+.criacaoLista form img {
+  width: 300px;
+  height: 300px;
+  padding: 5px;
+}
+
+button {
+  margin-left: 3%;
+}
+
 .navbar-transparente {
   padding: 15px 0px;
   height: 90px;

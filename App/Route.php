@@ -31,6 +31,12 @@ class Route extends Bootstrap {
 			'controller' => 'indexController',
 			'action' => 'login'
 		);
+
+		$routes['perguntasFrequentes'] = array(
+			'route' => '/perguntasFrequentes',
+			'controller' => 'indexController',
+			'action' => 'perguntasFrequentes'
+		);
 		
 		$routes['logar'] = array(
 			'route' => '/logar',
@@ -80,11 +86,19 @@ class Route extends Bootstrap {
 			'action' => 'escolherLista'
 		);
 		
-		$routes['perguntasFrequentes'] = array(
-			'route' => '/perguntasFrequentes',
-			'controller' => 'indexController',
-			'action' => 'perguntasFrequentes'
+		$routes['criarListaCasamento'] = array(
+			'route' => '/criarListaCasamento',
+			'controller' => 'AppController',
+			'action' => 'criarListaCasamento'
 		);
+
+		$routes['inserirLista'] = array(
+			'route' => '/inserirLista',
+			'controller' => 'AppController',
+			'action' => 'inserirLista'
+		);
+		
+
 
 		$this->setRoutes($routes);
 	}

@@ -1,10 +1,10 @@
 <section class="banner" id="home">
     <div class="cabecalho-home">
-        <header> <!--inicio header-->
+    <header> <!--inicio header-->
                 <nav class="navbar navbar-expand-md navbar-light navbar-transparente"> <!--inicio nav-->
                     <div class="container"> <!--inicio container-->
-                        <img class="logo" src="img/logo/logoPngSf.png">
-                        <a href="/logado" class="titulo">Presentei.com</a>
+                        <a href="/logado"><img class="logo" src="img/logo/logoPngSf.png"></a>
+
 
                         <button class="navbar-toggler" data-toggle="collapse" data-target="#nav-principal">  <!--inicio button-->
                         <i class="fas fa-bars text-white"></i>
@@ -14,10 +14,10 @@
 
                         <ul class="navbar-nav ml-auto"> <!--inicio ul-->                            
                             <li class="nav-item">
-                            <a href="/minhaConta" class="nav-link"><?= $this->view->usuario['nome']?></a>
+                            <a href="/minhaConta" class="nav-link"><?= $this->view->nome?></a>
                             </li>
                             <li class="nav-item">
-                            <a href="/perguntasFrenquentes" class="nav-link">Minha lista</a>
+                            <a href="/escolherLista" class="nav-link">Minha lista</a>
                             </li>
                             <li class="nav-item">
                             <a href="/sair" class="nav-link">Sair</a>

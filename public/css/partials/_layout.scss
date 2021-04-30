@@ -808,4 +808,118 @@ footer{
     }
 }
 
+// ========================== CRIAR LISTAS ==========================
+
+
+.cabecalho-home-lista{
+    width: 100%;
+    height: 130vh;
+    line-height: 100px;
+    // background: rgb(0, 0, 0) transparent;
+    background: rgba(83, 83, 83, 0.7);
+    display: inline-block;
+
+    @include responsive(s){
+        height: 140vh;
+    }
+}
+
+.banner-lista {
+    width: 100%;
+    height: 130vh;
+    background-image: url(../img/fundCasamento.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: mymove 40s infinite;
+
+    @include responsive(s){
+        height: 140vh;
+    }
+}
+
+.criacaoLista{
+    border: 1px solid greenyellow;
+    width: 80%;
+    height: 84%;
+    margin-top: 30px;
+    padding: 10px;
+
+    form{
+        border: 1px solid rebeccapurple;
+        width: 100%;
+        height: 100%;
+        padding: 5px;
+
+        // .divCustom{
+        //     border: 1px solid red;
+        //     width: 100%;
+        //     height: 100%;
+        // }
+
+        label {
+            line-height: 20px;
+            color: $white-light;
+            @include responsive(m){
+                margin-left: 5%;
+            }
+    
+            @include responsive(s){
+                margin-left: 10%;
+                font-size: 15px;   
+    
+            }
+        }
+
+        input {
+            height: 50px;
+            padding: 10px;
+            margin: 0 auto;
+            @include responsive(m){
+                width: 90%;
+                
+            }
+        }
+
+        .form-control {
+            background-color: $white-light;
+            
+            &:focus {
+                border-color: #FF0000;
+                box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6);
+            }
+        }
+
+        p{
+            // border: 1px solid red;
+            width: 100%;
+            line-height: 20px;
+            font-size: 14px;
+            color:  $white-light;
+        }
+
+        textarea{
+            min-height: 50px;
+            padding: 10px;
+            margin: 0 auto;
+            max-height: 100px;
+            @include responsive(m){
+                width: 90%;
+                
+            }
+        }
+
+        img{
+            width: 300px; 
+            height: 300px;
+            padding: 5px;
+        }
+
+    }
+
+}
+
+button{
+    margin-left: 3%;
+}
+
 
