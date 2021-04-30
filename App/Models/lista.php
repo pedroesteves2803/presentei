@@ -13,6 +13,8 @@ class Lista extends Model {
     private $local;
     private $arquivo;
 
+    //lista
+
 
     public function __get($atributo) {
         return $this->$atributo;  

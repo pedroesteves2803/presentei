@@ -74,7 +74,7 @@ class AppController extends Action {
 
 	}
 
-	//validar senha
+	//validar senhaaaa
 
 	public function atualizarSenhaUsuario() {
 		$this->validaAutenticacao();
