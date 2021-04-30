@@ -4,23 +4,23 @@
                 <nav class="navbar navbar-expand-md navbar-light navbar-transparente"> <!--inicio nav-->
                     <div class="container"> <!--inicio container-->
                         <img class="logo" src="img/logo/logoPngSf.png">
-                        <a href="/" class="titulo">Presentei.com</a> 
+                        <a href="/logado" class="titulo">Presentei.com</a> 
 
-                        <button class="navbar-toggler" data-toggle="collapse" data-target="#nav-principal" >  <!--inicio button-->
+                        <button class="navbar-toggler" data-toggle="collapse" data-target="#nav-principal">  <!--inicio button-->
                         <i class="fas fa-bars text-white"></i>
                         </button> <!--final button-->
 
                         <div class="collapse navbar-collapse" id="nav-principal"> <!-- inicio div collapse-->
 
-                        <ul class="navbar-nav ml-auto"> <!--inicio ul-->
+                        <ul class="navbar-nav ml-auto"> <!--inicio ul-->                            
                             <li class="nav-item">
-                            <a href="/?login=login" class="nav-link">Login</a>
+                            <a href="/minhaConta" class="nav-link"><?= $this->view->nome?></a>
                             </li>
                             <li class="nav-item">
-                            <a href="/cadastro" class="nav-link">Cadastro</a>
+                            <a href="/escolherLista" class="nav-link">Minha lista</a>
                             </li>
                             <li class="nav-item">
-                            <a href="/perguntasFrenquentes" class="nav-link">Perguntas Frequentes</a>
+                            <a href="/sair" class="nav-link">Sair</a>
                             </li>
                         </ul> <!--final ul-->
 
@@ -36,63 +36,35 @@
             <section class="listaDePresente">            
                 <div class="iconesPresente">
 
-                    <div id="carousel" class="carousel slide" data-ride="carousel" >
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <div class="pngIconesPresente">
-                                    <img src="img/lista/fotografia-de-casamento.png" alt="">
-                                    <button type="submit" class="btn btn-custom btn-sm">Casamento</button>
-                                </div>
-
-                                <div class="pngIconesPresente">
-                                    <img src="img/lista/festa-de-aniversario.png" alt="">
-                                    <button type="submit" class="btn btn-custom btn-sm">Aniversario</button>
-                                </div>
-
-                                <div class="pngIconesPresente">
-                                    <img src="img/lista/carrinho-de-bebe.png" alt="">
-                                    <button type="submit" class="btn btn-custom btn-sm">Chá de bebê</button>
-                                </div>
-
-                                <div class="pngIconesPresente">
-                                    <img src="img/lista/utensilios-de-cozinha.png" alt="">
-                                    <button type="submit" class="btn btn-custom btn-sm">Chá de cozinha</button>
-                                </div>
-                            </div>
-
-                            <div class="carousel-item">
-                                <div class="pngIconesPresente">
-                                    <img src="img/lista/utensilios-de-cozinha.png" alt="">
-                                    <button type="submit" class="btn btn-custom btn-sm">Casamento</button>
-                                </div>
-
-                                <div class="pngIconesPresente">
-                                    <img src="img/lista/carrinho-de-bebe.png" alt="">
-                                    <button type="submit" class="btn btn-custom btn-sm">Aniversario</button>
-                                </div>
-
-                                <div class="pngIconesPresente">
-                                    <img src="img/lista/festa-de-aniversario.png" alt="">
-                                    <button type="submit" class="btn btn-custom btn-sm">Chá de bebê</button>
-                                </div>
-
-                                <div class="pngIconesPresente">
-                                    <img src="img/lista/fotografia-de-casamento.png" alt="">
-                                    <button type="submit" class="btn btn-custom btn-sm">Chá de cozinha</button>
-                                </div>
-                            </div>
-                            
-                        </div>
-
+                    <div class="pngIconesPresente">
+                         <img src="img/lista/fotografia-de-casamento.png" alt="">
+                         <button type="submit" class="btn btn-custom btn-sm">Casamento</button>
                     </div>
 
-                        <a href="#carousel" class="carousel-control-prev" data-slide="prev">
+                    <div class="pngIconesPresente">
+                        <img src="img/lista/festa-de-aniversario.png" alt="">
+                        <button type="submit" class="btn btn-custom btn-sm">Aniversario</button>
+                    </div>
+
+                    <div class="pngIconesPresente">
+                        <img src="img/lista/carrinho-de-bebe.png" alt="">
+                        <button type="submit" class="btn btn-custom btn-sm">Chá de bebê</button>
+                    </div>
+
+                    <div class="pngIconesPresente">
+                        <img src="img/lista/utensilios-de-cozinha.png" alt="">
+                        <button type="submit" class="btn btn-custom btn-sm">Chá de cozinha</button>
+                    </div>
+
+
+
+                        <!-- <a href="#carousel" class="carousel-control-prev" data-slide="prev">
                             <img class="png-setas" src="img/setas/png/seta-esquerda.png">                    
                         </a>
 
                         <a href="#carousel" class="carousel-control-next" data-slide="next">
                             <img class="png-setas" src="img/setas/png/seta-direita.png">                    
-                        </a>
+                        </a> -->
                     </div> 
 
                     <section class="propriaLista">

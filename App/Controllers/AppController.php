@@ -116,6 +116,8 @@ class AppController extends Action {
 
 		$this->validaAutenticacao();
 
+		$this->view->nome = $_SESSION['nome'];
+
 		$this->render('escolherLista');
 		
 		// $this->view->senhaConf = true;

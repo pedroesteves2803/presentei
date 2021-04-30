@@ -1,35 +1,3 @@
-<!-- <div id="page-home">
-    <main>
-        <a href="#">abra</a>
-    </main>
-</div>
-
-
-<div id="modal" class="hide"> Inicio modal=Preenchimento da tela toda// Hide=Esconder e só apararecer quando clicar em login
-    <div class="content"> Inicio content(todo o conteudo dentro do modal)
-        <div class="header"> 
-            <h1>Login</h1>
-            <a href="#">Fechar</a>
-        </div>
-
-        <form action="">
-            <label for="search">Email</label>
-            <div class="search field">
-                <input type="text" name="search" placeholder="email@exemplo.com">
-            </div>
-
-            <label for="search">Senha</label>
-            <div class="search field">
-                <input type="text" name="senha" id="senha" class="senha" placeholder="Sua senha">
-                <label class="chk">
-                    <img class="olho" id="imgOlho" src="img/senha/olhoFechado.svg" alt="" onclick="mostrarSenha()">
-                </label> 
-            </div>
-            
-        </form>
-    </div>
-</div> -->
-
 <section class="banner" id="home">
     <div class="cabecalho-home">
         <header> <!--inicio header-->
@@ -46,7 +14,7 @@
 
                         <ul class="navbar-nav ml-auto"> <!--inicio ul-->
                             <li class="nav-item">
-                            <a href="/" class="nav-link">Login</a>
+                            <a href="/?login=login" class="nav-link">Login</a>
                             </li>
                             <li class="nav-item">
                             <a href="/cadastro" class="nav-link">Cadastro</a>
@@ -64,55 +32,63 @@
 
         </header> <!--final header-->    
                 
-        <section class="container listaDePresentes">
-            <div class="txt">
-                <h1>Lista de presentes</h1>
-                <p>O jeito mais fácil de presentear e ser presenteado em <br> 
-                    todos os momentos importantes de sua vida</p>                            
-            </div>
-                    
-            <div class="botaoRolagem">
-                <a href="#part1"><img class="svg-setas" src="img/setas/svg/seta-para-baixo.svg" onload="SVGInject(this)"></a>
-                <div class="back-to-top" href="#"></div>
-            </div>
+        <section class="perguntasFrequentes container">
+                <div class="containerPgt">  
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <h1 class="titPerguntas">FAQ – Presenteie.com</h1>
+                        </div>
+
+                        <div class="col-sm-12">
+
+                            <h2 class="subPerguntas">Como ciar uma lista?</h2>
+                            <div class="divRespostas">
+                                <ul>
+                                    <li class="respostas">Criando uma Conta no no site;</li>
+                                    <li class="respostas">Indo na Parte de minhas listas</li>
+                                    <li class="respostas">Selecionando algum tipo de lista</li>
+                                    <li class="respostas">Colocando os item</li>
+                                </ul>  
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12">
+                            <h2 class="subPerguntas">Como divulgar a minha lista?</h2>
+
+                            <p>Você pode compartilhar a sua lista com os seus amigos de várias maneiras:</p>
+
+                            <div class="divRespostas">
+                                <ul>
+                                    <li>Através do link que foi criado especialmente para você;</li>
+                                    <li>Divulgando o código da sua lista junto com o endereço do nosso site;</li>
+                                    <li>Pedindo para os seus amigos pesquisarem o nome da sua lista, data de quando acontecerá o evento ou pelo código fornecido pelo site ao criar a lista. </li>
+                                </ul>  
+                                
+                            </div>                                                        
+
+                        </div>
+
+                        <div class="col-sm-12">
+                            <p>Você pode encontrar todas essas informações na nossa plataforma, basta realizar o Login e a acessar o menu "Minhas Listas".</p>
+                        </div>
+
+                        <div class="col-sm-12">
+                            <h2 class="subPerguntas">Como encontrar uma lista?</h2>
+                            <p>basta acessar a página “Procurar Lista”, encontrada na página inical do nosso site, e pesquise pelo nome da lista, nome dos organizadores, data do evento ou código da lista. </p>
+
+                            <h2 class="subPerguntas">O que fazer caso ocorra o esquecimento da senha da minha conta? </h2>
+                            <p>Para redifinir sua senha, na página deverá de  “Login”, clicar em “Esqueci minha senha”. Logo aopós, deverá informar o email cadastrado para que possamos enviar um link para fazer a alteração de sua Nova Senha. </p>
+
+                        </div>
+
+
+                        
+                    </div>      
+                </div>
         </section>
+        
     </div>           
 </section>
-
-<main class="perguntasFrequentes">
-        <h1 id="titPerguntas">FAQ – Presenteie.com</h1>
-
-        <h2 id="subPerguntas">Como ciar uma lista?</h2>
-
-            <ul>
-                <li class="respostas">Parar criar uma lista de presentes, primeiro você deve se cadastrar e logar. Após o Login, será redirecionado para a nossa página inicial e deverá clicar em “Criar minha lista”. Selecione o tipo de lista que quer criar entre Lista de Casamento, Lista de Aniversário, Chá de Bebê, Chá de Cozinha.</li>
-                <li class="respostas">Caso queira criar e customizar sua própria lista, selecione “Crie a sua lista do zero” e escolha os produtos que preferir.  </li>
-                <li class="respostas">Preencha os dados do evento e escolha uma imagem para a sua lista. Lembre-se que quanto mais informações você colocar, mais fácil fica para os seus convidados te encontrarem na plataforma.</li>
-                <li class="respostas">Após completar criacão da sua lista, você poderá fazer a divulgação de sua lista. </li>
-            </ul><br>
-
-        <h2 id="subPerguntas">Como divulgar a minha lista?</h2>
-
-            <label class="respostas">Você pode compartilhar a sua lista com os seus amigos de várias maneiras:</label>
-
-            <ul id="numeros">
-                <li class="numerico">Através do link que foi criado especialmente para você;</li>
-                <li class="numerico">Divulgando o código da sua lista junto com o endereço do nosso site;</li>
-                <li class="numerico">Pedindo para os seus amigos pesquisarem o nome da sua lista, data de quando acontecerá o evento ou pelo código fornecido pelo site ao criar a lista. </li>
-            </ul>
-
-            <label class="respostas">Você pode encontrar todas essas informações na nossa plataforma, basta realizar o Login e a acessar o menu "Minhas Listas".</label><br><br>
-        
-        <h2 id="subPerguntas">Como encontrar uma lista?</h2>
-            
-            <label class="respostas">basta acessar a página “Procurar Lista”, encontrada na página inical do nosso site, e pesquise pelo nome da lista, nome dos organizadores, data do evento ou código da lista. </label><br><br>
-
-        <h2 id="subPerguntas">O que fazer caso ocorra o esquecimento da senha da minha conta? </h2>
-
-            <label class="respostas">Para redifinir sua senha, na página deverá de  “Login”, clicar em “Esqueci minha senha”. Logo aopós, deverá informar o email cadastrado para que possamos enviar um link para fazer a alteração de sua Nova Senha. </label>
-            
-
-    </main>
 
 
 <footer>            

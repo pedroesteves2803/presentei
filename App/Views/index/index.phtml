@@ -4,7 +4,7 @@
                 <nav class="navbar navbar-expand-md navbar-light navbar-transparente"> <!--inicio nav-->
                     <div class="container"> <!--inicio container-->
                         
-                        <a href="#"><img class="logo" src="img/logo/logoPngSf.png"></a>
+                        <a href="/"><img class="logo" src="img/logo/logoPngSf.png"></a>
 
                         <button class="navbar-toggler" data-toggle="collapse" data-target="#nav-principal" >  <!--inicio button-->
                         <i class="fas fa-bars text-white"></i>
@@ -14,7 +14,7 @@
 
                         <ul class="navbar-nav ml-auto"> <!--inicio ul-->
                             <li class="nav-item">
-                            <a href="#" class="nav-link" id="abrir">Login</a>
+                            <a href="/?login=login" class="nav-link" id="abr">Login</a>
                             </li>
                             <li class="nav-item">
                             <a href="/cadastro" class="nav-link">Cadastro</a>
@@ -32,8 +32,8 @@
 
         </header> <!--final header-->
 
-        <div id="modal" class="hide"> <!-- Inicio modal=Preenchimento da tela toda// Hide=Esconder e só apararecer quando clicar em login -->
-            <div class="content"> <!--Inicio content(todo o conteudo dentro do modal) -->
+        <!-- <div id="modal" class="hide"> Inicio modal=Preenchimento da tela toda// Hide=Esconder e só apararecer quando clicar em login 
+            <div class="content"> Inicio content(todo o conteudo dentro do modal) 
                 <div class="header"> 
                     <h1>Login</h1>
                     <a href="#" id="fechar">Fechar</a>
@@ -57,7 +57,33 @@
                     </div>
                 </form>
             </div>
-        </div>
+        </div> -->
+
+        <?php if($this->view->btnLogin == 'login'){?>
+            <section class="container containerCustom">
+                <div class="menuLogin">
+                    <form action="/logar" method="post" class="form-inline">
+                        <div class="form-grupo mb-2">
+                            <label for="senha" class="sr-only customLabel">Email</label>
+                            <input type="text" class="form-control" id="email" name="email" placeholder="email@exemplo.com">
+                        </div>
+
+                        <div class="form-grupo mx-sm-3 mb-2">
+                            <label for="senha" class="sr-only customLabel">Senha</label>
+                            <input type="password" class="form-control " id="senha" name="senha" placeholder="Senha">
+                            <label class="chk">
+                                <img class="olho" id="imgOlho" src="img/senha/olhoFechado.svg" alt="" onclick="mostrarSenha()">
+                            </label>                
+                        </div>
+                        <button type="submit" class="btn btn-custom mb-2 ">Logar</button>
+                    </form>
+                    <?php if($this->view->loginErro) { ?>
+                            <small class="text-erro-login">*Erro ao fazer login, E-mail ou Senha incorreto</small>
+                    <?php }?>
+                </div>
+                
+            </section>
+        <?php }?>
     
                 
         <section class="container listaDePresentes">
