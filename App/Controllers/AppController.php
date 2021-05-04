@@ -122,7 +122,7 @@ class AppController extends Action {
 		$this->render('escolherLista');
 		
 		// $this->view->senhaConf = true;
-		
+		// $this->view->senhaConf = true;
 
 	}
 
