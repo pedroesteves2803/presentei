@@ -1,38 +1,36 @@
 <section class="banner" id="home">
     <div class="cabecalho-home">
         <header> <!--inicio header-->
-                <nav class="navbar navbar-expand-md navbar-light navbar-transparente"> <!--inicio nav-->
-                    <div class="container"> <!--inicio container-->
-                        <a href="/logado"><img class="logo" src="img/logo/logoPngSf.png"></a>
+                    <nav class="navbar navbar-expand-md navbar-light navbar-transparente"> <!--inicio nav-->
+                        <div class="container"> <!--inicio container-->
+                            <a href="/logado"><img class="logo" src="img/logo/logoPngSf.png"></a>
 
 
-                        <button class="navbar-toggler" data-toggle="collapse" data-target="#nav-principal">  <!--inicio button-->
-                        <i class="fas fa-bars text-white"></i>
-                        </button> <!--final button-->
+                            <button class="navbar-toggler" data-toggle="collapse" data-target="#nav-principal">  <!--inicio button-->
+                            <i class="fas fa-bars text-white"></i>
+                            </button> <!--final button-->
 
-                        <div class="collapse navbar-collapse" id="nav-principal"> <!-- inicio div collapse-->
+                            <div class="collapse navbar-collapse" id="nav-principal"> <!-- inicio div collapse-->
 
-                        <ul class="navbar-nav ml-auto"> <!--inicio ul-->                            
-                            <li class="nav-item">
-                            <a href="/minhaConta" class="nav-link"><?= $this->view->nome?></a>
-                            </li>
-                            <li class="nav-item">
-                            <a href="/escolherLista" class="nav-link">Minha lista</a>
-                            </li>
-                            <li class="nav-item">
-                            <a href="/sair" class="nav-link">Sair</a>
-                            </li>
-                        </ul> <!--final ul-->
+                            <ul class="navbar-nav ml-auto"> <!--inicio ul-->                            
+                                <li class="nav-item">
+                                <a href="/minhaConta" class="nav-link"><?= $this->view->nome?></a>
+                                </li>
+                                <li class="nav-item">
+                                <a href="/escolherLista" class="nav-link">Minha lista</a>
+                                </li>
+                                <li class="nav-item">
+                                <a href="/sair" class="nav-link">Sair</a>
+                                </li>
+                            </ul> <!--final ul-->
 
-                        </div> <!--final div collapse-->
+                            </div> <!--final div collapse-->
 
-                    </div> <!--final container-->
+                        </div> <!--final container-->
 
-                </nav> <!--final nav-->
+                    </nav> <!--final nav-->
 
-        </header> <!--final header-->
-
-
+            </header> <!--final header-->
     
                 
         <section class="container listaDePresentes">
@@ -56,14 +54,14 @@
                 <h1><img class="svg-icones" src="img/presentes/presente.svg" onload="SVGInject(this)"> Listas de presentes</h1>
                 <p>Aqui você cria listas para ser presenteado <br>
                 Em todos os momentos de sua vida</p>
-                <h2><a href="criarLista.html">CRIAR MINHA LISTA</a></h2>
+                <h2><a href="/escolherLista">CRIAR MINHA LISTA</a></h2>
             </div>
             
             <div class="presentear">
                 <h1><img class="svg-icones" src="img/coracao/terra.svg" onload="SVGInject(this)"> Presenteie agora</h1>
                 <p>Está procurando uma lista?<br>
                 Aqui você encontra a lista de seus amigos e escolhe o presente</p>
-                <h2><a href="procurarLista.php">PROCURAR UMA LISTA</a></h2>
+                <h2><a href="/logado">PROCURAR UMA LISTA</a></h2>
             </div>
 
         </div>

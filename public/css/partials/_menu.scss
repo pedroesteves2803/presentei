@@ -35,19 +35,17 @@ $container-s: 540px;
 
 
 .navbar-transparente {
-	padding: 15px 0px;
+    // border: 1px solid green;
+    padding: 15px 0px;
+    height: 100px;
 	// background: rgba(136, 16, 7, 0.295);
-  // border: 1px solid red;
-  height: 90px;
-
-
 }
 
 .logo {
     /* float: left; */
     width: 200px;
     height: 200px;
-    margin: 10px 30px 0 15px;
+    margin: 20px 30px 0 15px;
 
     @include responsive(s){
         display: none;
@@ -58,8 +56,6 @@ $container-s: 540px;
     @include responsive(s){
         margin-right: 10%;
     }
-  // border: 1px solid rebeccapurple;
-
 }
 
 .titulo {
@@ -77,13 +73,13 @@ $container-s: 540px;
         margin-left: 10%;
         
     }
-  // border: 1px solid rebeccapurple;
     
 }
 
 .navbar-light .navbar-nav {
+
+  // border: 1px solid green;
   
-  // border: 1px solid rebeccapurple;
   @include responsive(s){
     margin-left: 10%;
     height: 100px;
@@ -99,8 +95,7 @@ $container-s: 540px;
     transition: all 0.8s ease;
     position: relative;
     height: 90px;
-    // border: 1px solid rebeccapurple;
-
+    // border: 1px solid green;
 
     // &::before {
     //     content: '';
@@ -159,9 +154,7 @@ $container-s: 540px;
 
 .menuLogin {
   float: right;
-  padding: 10px;
-  margin-top: 35px;
-  // border: 1px solid rebeccapurple;
+  margin-top: 40px;
 
   @include responsive(s){
     margin-top: 10px;
@@ -194,7 +187,7 @@ $container-s: 540px;
 .olho {
   width: 30px;
   height: 30px;
-  margin: 10px;
+  margin: 15px;
 
   @include responsive(s){
     width: 20px;

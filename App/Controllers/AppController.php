@@ -40,8 +40,6 @@ class AppController extends Action {
 			'confSenha' => '',
 			'telefone' => $_SESSION['telefone']
 		);
-		$this->view->nome = $_SESSION['nome'];
-
 		$this->view->certoSenha = '';
 		$this->view->erroSenha = '';
 
@@ -73,8 +71,6 @@ class AppController extends Action {
 			$this->render('minhaConta');
 
 	}
-
-	//validar senhaaaa
 
 	public function atualizarSenhaUsuario() {
 		$this->validaAutenticacao();
@@ -133,9 +129,16 @@ class AppController extends Action {
 	public function criarListaCasamento() {
 
 		$this->validaAutenticacao();
+		$this->view->nome = $_SESSION['nome'];
+		$this->render('criarListaCasamento');
+		
+
+	}
+
+	public function salvarListas(){
+		
+		$this->validaAutenticacao();
 		$lista = Container::getModel('Lista');
-
-
 		$this->view->nome = $_SESSION['nome'];
 
 		$lista->__set('nome', $_POST['nome']);
@@ -143,7 +146,7 @@ class AppController extends Action {
 		$lista->__set('texto', $_POST['texto']);
 		$lista->__set('data', $_POST['data']);
 		$lista->__set('local', $_POST['local']);
-		$lista->__set('arquivo', $_POST['arquivo']);
+		$lista->__set('arquivo', $_FILES['arquivo']['name']); 
 
 
 		$this->view->usuario = array(
@@ -157,62 +160,66 @@ class AppController extends Action {
 		
 		if(empty($nome) and empty($data) and  empty($local)){
 			$this->view->camposCrt = true;
+			//Pasta onde o arquivo vai ser salvo
+			$_UP['pasta'] = 'img/imgfotosListas/';
+		
+			//Tamanho máximo do arquivo em Bytes
+			$_UP['tamanho'] = 1024*1024*100; //5mb
+			
+			//Array com a extensões permitidas
+			$_UP['extensoes'] = array('png', 'jpg', 'jpeg', 'gif');
+			
+			//Renomeiar
+			$_UP['renomeia'] = false;
+			
+			//Array com os tipos de erros de upload do PHP
+			$_UP['erros'][0] = 'Não houve erro';
+			$_UP['erros'][1] = 'O arquivo no upload é maior que o limite do PHP';
+			$_UP['erros'][2] = 'O arquivo ultrapassa o limite de tamanho especificado no HTML';
+			$_UP['erros'][3] = 'O upload do arquivo foi feito parcialmente';
+			$_UP['erros'][4] = 'Não foi feito o upload do arquivo';
+
+			//Faz a verificação do tamanho do arquivo
+			if ($_UP['tamanho'] < $_FILES['arquivo']['size']){
+				$this->view->tamanhosIncorreto = true;			
+			}
+
+		//O arquivo passou em todas as verificações, hora de tentar move-lo para a pasta foto
+			else{
+			//Primeiro verifica se deve trocar o nome do arquivo
+				if($_UP['renomeia'] == true){
+					//Cria um nome baseado no UNIX TIMESTAMP atual e com extensão .jpg
+					$nome_final = time().'.jpg';
+				}else{
+					//mantem o nome original do arquivo
+					$nome_final = $_FILES['arquivo']['name'];
+				}
+				//Verificar se é possivel mover o arquivo para a pasta escolhida
+				if(move_uploaded_file($_FILES['arquivo']['tmp_name'], $_UP['pasta']. $nome_final)){
+					//Upload efetuado com sucesso, exibe a mensagem
+					$this->view->inserido = true;
+					
+					$lista->inserirLista();
+					$this->render('criarListaCasamento');
+								
+						
+				}else{
+
+					$this->view->inserido = false;			
+
+				}
+			}		
+			
+
 		}
 
-		//Pasta onde o arquivo vai ser salvo
-		$_UP['pasta'] = 'fotosListas/';
-    
-		//Tamanho máximo do arquivo em Bytes
-		$_UP['tamanho'] = 1024*1024*100; //5mb
+		$this->render('criarListaCasamento');
 		
-		//Array com a extensões permitidas
-		$_UP['extensoes'] = array('png', 'jpg', 'jpeg', 'gif');
 		
-		//Renomeiar
-		$_UP['renomeia'] = false;
 		
-		//Array com os tipos de erros de upload do PHP
-		$_UP['erros'][0] = 'Não houve erro';
-		$_UP['erros'][1] = 'O arquivo no upload é maior que o limite do PHP';
-		$_UP['erros'][2] = 'O arquivo ultrapassa o limite de tamanho especificado no HTML';
-		$_UP['erros'][3] = 'O upload do arquivo foi feito parcialmente';
-		$_UP['erros'][4] = 'Não foi feito o upload do arquivo';
-
-		//Faz a verificação do tamanho do arquivo
-		if ($_UP['tamanho'] < $_FILES['arquivo']['size']){
-			$this->view->tamanhosIncorreto = true;			
-		}
-
-    //O arquivo passou em todas as verificações, hora de tentar move-lo para a pasta foto
-    	else{
-        //Primeiro verifica se deve trocar o nome do arquivo
-        if($_UP['renomeia'] == true){
-            //Cria um nome baseado no UNIX TIMESTAMP atual e com extensão .jpg
-            $nome_final = time().'.jpg';
-        }else{
-            //mantem o nome original do arquivo
-            $nome_final = $_FILES['arquivo']['name'];
-        }
-        //Verificar se é possivel mover o arquivo para a pasta escolhida
-        if(move_uploaded_file($_FILES['arquivo']['tmp_name'], $_UP['pasta']. $nome_final)){
-            //Upload efetuado com sucesso, exibe a mensagem
-			$this->view->inserido = true;
-            
-			$this->render('inserirLista');
-                          
-            	
-        }else{
-
-			$this->view->inserido = false;
-			$this->render('criarListaCasamento');
-
-
-        }
-    }		
 		
-		// $this->view->senhaConf = true;
-
 	}
+	
 }
 
 ?>

@@ -4,7 +4,7 @@
                 <nav class="navbar navbar-expand-md navbar-light navbar-transparente"> <!--inicio nav-->
                     <div class="container"> <!--inicio container-->
                         
-                        <a href="/"><img class="logo" src="img/logo/logoPngSf.png"></a>
+                        <a href="/"><img class="logo" src="img/logo/logoPngSf.png"></a> 
 
                         <button class="navbar-toggler" data-toggle="collapse" data-target="#nav-principal" >  <!--inicio button-->
                         <i class="fas fa-bars text-white"></i>
@@ -14,7 +14,7 @@
 
                         <ul class="navbar-nav ml-auto"> <!--inicio ul-->
                             <li class="nav-item">
-                            <a href="/?login=login" class="nav-link" id="abr">Login</a>
+                            <a href="/?login=login" class="nav-link">Login</a>
                             </li>
                             <li class="nav-item">
                             <a href="/cadastro" class="nav-link">Cadastro</a>
@@ -31,33 +31,6 @@
                 </nav> <!--final nav-->
 
         </header> <!--final header-->
-
-        <!-- <div id="modal" class="hide"> Inicio modal=Preenchimento da tela toda// Hide=Esconder e só apararecer quando clicar em login 
-            <div class="content"> Inicio content(todo o conteudo dentro do modal) 
-                <div class="header"> 
-                    <h1>Login</h1>
-                    <a href="#" id="fechar">Fechar</a>
-                </div>
-
-                <form action="">
-                    <label for="search">Email</label>
-                    <div class="search field">
-                        <input type="text" name="search"  placeholder="email@exemplo.com">
-                        <div class="chk" >
-
-                        </div>
-                    </div>
-
-                    <label for="search">Senha</label>
-                    <div class="search field">
-                        <input type="text" name="senha" id="senha" class="senha" placeholder="Sua senha">
-                        <label class="chk">
-                            <img class="olho" id="imgOlho" src="img/senha/olhoFechado.svg" alt="" onclick="mostrarSenha()">
-                        </label> 
-                    </div>
-                </form>
-            </div>
-        </div> -->
 
         <?php if($this->view->btnLogin == 'login'){?>
             <section class="container containerCustom">
@@ -95,7 +68,6 @@
                     
             <div class="botaoRolagem">
                 <a href="#part1"><img class="svg-setas" src="img/setas/svg/seta-para-baixo.svg" onload="SVGInject(this)"></a>
-                <div class="back-to-top" href="#"></div>
             </div>
         </section>
     </div>           
@@ -107,15 +79,15 @@
             <div class="escolher">
                 <h1><img class="svg-icones" src="img/presentes/presente.svg" onload="SVGInject(this)"> Listas de presentes</h1>
                 <p>Aqui você cria listas para ser presenteado <br>
-                em todos os momentos de sua vida</p>
-                <h2><a href="/cadastro">CRIAR MINHA LISTA</a></h2>
+                Em todos os momentos de sua vida</p>
+                <h2><a href="/?login=login">CRIAR MINHA LISTA</a></h2>
             </div>
             
             <div class="presentear">
                 <h1><img class="svg-icones" src="img/coracao/terra.svg" onload="SVGInject(this)"> Presenteie agora</h1>
                 <p>Está procurando uma lista?<br>
-                Aqui você encontra a lista dos seus amigos e escolhe o presente perfeito!</p>
-                <h2><a href="/cadastro">PROCURAR UMA LISTA</a></h2>
+                Aqui você encontra a lista de seus amigos e escolhe o presente</p>
+                <h2><a href="/procurarLista">PROCURAR UMA LISTA</a></h2>
             </div>
 
         </div>
@@ -126,13 +98,14 @@
 </section>
 
 
-<footer>            
+<footer id="footer">            
   <div class="container">
     <a href="/" class="titulo">Presentei.com</a> 
   </div>
 </footer>
 
-             
+    
+
     <!-- JavaScript (Opcional) -->
     <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

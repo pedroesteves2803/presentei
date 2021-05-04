@@ -992,6 +992,8 @@ fieldset {
   margin-top: 75px;
   cursor: pointer;
   padding: 10px 10px;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
 }
 
 .botaoRolagem .svg-setas {
@@ -1607,21 +1609,6 @@ footer {
   margin-top: 0;
 }
 
-.carousel-control-prev,
-.carousel-control-next {
-  width: 80px;
-  height: 80px;
-  margin: auto 15%;
-  border: 1px solid red;
-}
-
-.carousel-control-prev .png-setas,
-.carousel-control-next .png-setas {
-  width: 40px;
-  height: 50px;
-  border: 1px solid rebeccapurple;
-}
-
 .perguntasFrequentes {
   background: rgba(190, 185, 185, 0.4);
   border-radius: 20px;
@@ -1749,7 +1736,8 @@ footer {
 }
 
 .criacaoLista {
-  border: 1px solid greenyellow;
+  background: rgba(190, 185, 185, 0.4);
+  border-radius: 10px;
   width: 80%;
   height: 84%;
   margin-top: 30px;
@@ -1757,7 +1745,6 @@ footer {
 }
 
 .criacaoLista form {
-  border: 1px solid rebeccapurple;
   width: 100%;
   height: 100%;
   padding: 5px;
@@ -1824,25 +1811,37 @@ footer {
 }
 
 .criacaoLista form img {
-  width: 300px;
-  height: 300px;
+  border: 0;
+  width: 200px;
+  height: 200px;
   padding: 5px;
 }
 
-button {
-  margin-left: 3%;
+.carousel-control-prev,
+.carousel-control-next {
+  width: 80px;
+  height: 80px;
+  margin: auto 15%;
+  border: 1px solid red;
+}
+
+.carousel-control-prev .png-setas,
+.carousel-control-next .png-setas {
+  width: 40px;
+  height: 50px;
+  border: 1px solid rebeccapurple;
 }
 
 .navbar-transparente {
   padding: 15px 0px;
-  height: 90px;
+  height: 100px;
 }
 
 .logo {
   /* float: left; */
   width: 200px;
   height: 200px;
-  margin: 10px 30px 0 15px;
+  margin: 20px 30px 0 15px;
 }
 
 @media screen and (max-width: 960px) {
@@ -1921,8 +1920,7 @@ button {
 
 .menuLogin {
   float: right;
-  padding: 10px;
-  margin-top: 35px;
+  margin-top: 40px;
 }
 
 @media screen and (max-width: 960px) {
@@ -1957,7 +1955,7 @@ button {
 .olho {
   width: 30px;
   height: 30px;
-  margin: 10px;
+  margin: 15px;
 }
 
 @media screen and (max-width: 960px) {

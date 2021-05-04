@@ -141,6 +141,15 @@ class IndexController extends Action {
 		$this->render('perguntasFrequentes');
 	}
 
+	public function criarLista(){
+		$this->render('criarLista');
+	}
+
+	public function procurarLista(){
+		$this->render('procurarLista');
+	}
+
+
 
 }
 

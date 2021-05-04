@@ -3,8 +3,8 @@
         <header> <!--inicio header-->
                 <nav class="navbar navbar-expand-md navbar-light navbar-transparente"> <!--inicio nav-->
                     <div class="container"> <!--inicio container-->
-                        
-                        <a href="/"><img class="logo" src="img/logo/logoPngSf.png"></a> 
+                        <img class="logo" src="img/logo/logoPngSf.png">
+                        <a href="/" class="titulo">Presentei.com</a> 
 
                         <button class="navbar-toggler" data-toggle="collapse" data-target="#nav-principal" >  <!--inicio button-->
                         <i class="fas fa-bars text-white"></i>
@@ -20,7 +20,7 @@
                             <a href="/cadastro" class="nav-link">Cadastro</a>
                             </li>
                             <li class="nav-item">
-                            <a href="/perguntasFrequentes" class="nav-link">Perguntas Frequentes</a>
+                            <a href="/perguntasFrenquentes" class="nav-link">Perguntas Frequentes</a>
                             </li>
                         </ul> <!--final ul-->
 
@@ -30,72 +30,53 @@
 
                 </nav> <!--final nav-->
 
-        </header> <!--final header-->    
-                
-        <section class="perguntasFrequentes container">
-                <div class="containerPgt">  
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <h1 class="titPerguntas">FAQ – Presenteie.com</h1>
-                        </div>
+        </header> <!--final header-->
 
-                        <div class="col-sm-12">
+    <section class="perguntasFrequentes">
+        <h1 id="titPerguntas">FAQ – Presenteie.com</h1>
 
-                            <h2 class="subPerguntas">Como ciar uma lista?</h2>
-                            <div class="divRespostas">
-                                <ul>
-                                    <li class="respostas">Criando uma Conta no no site;</li>
-                                    <li class="respostas">Indo na Parte de minhas listas</li>
-                                    <li class="respostas">Selecionando algum tipo de lista</li>
-                                    <li class="respostas">Colocando os item</li>
-                                </ul>  
-                            </div>
-                        </div>
+        <h2 id="subPerguntas">Como ciar uma lista?</h2>
 
-                        <div class="col-sm-12">
-                            <h2 class="subPerguntas">Como divulgar a minha lista?</h2>
+            <ul>
+                <li class="respostas">Parar criar uma lista de presentes, primeiro você deve se cadastrar e logar. Após o Login, será redirecionado para a nossa página inicial e deverá clicar em “Criar minha lista”. Selecione o tipo de lista que quer criar entre Lista de Casamento, Lista de Aniversário, Chá de Bebê, Chá de Cozinha.</li>
+                <li class="respostas">Caso queira criar e customizar sua própria lista, selecione “Crie a sua lista do zero” e escolha os produtos que preferir.  </li>
+                <li class="respostas">Preencha os dados do evento e escolha uma imagem para a sua lista. Lembre-se que quanto mais informações você colocar, mais fácil fica para os seus convidados te encontrarem na plataforma.</li>
+                <li class="respostas">Após completar criacão da sua lista, você poderá fazer a divulgação de sua lista. </li>
+            </ul><br>
 
-                            <p>Você pode compartilhar a sua lista com os seus amigos de várias maneiras:</p>
+        <h2 id="subPerguntas">Como divulgar a minha lista?</h2>
 
-                            <div class="divRespostas">
-                                <ul>
-                                    <li>Através do link que foi criado especialmente para você;</li>
-                                    <li>Divulgando o código da sua lista junto com o endereço do nosso site;</li>
-                                    <li>Pedindo para os seus amigos pesquisarem o nome da sua lista, data de quando acontecerá o evento ou pelo código fornecido pelo site ao criar a lista. </li>
-                                </ul>  
-                                
-                            </div>                                                        
+            <label class="respostas">Você pode compartilhar a sua lista com os seus amigos de várias maneiras:</label>
 
-                        </div>
+            <ul id="numeros">
+                <li class="numerico">Através do link que foi criado especialmente para você;</li>
+                <li class="numerico">Divulgando o código da sua lista junto com o endereço do nosso site;</li>
+                <li class="numerico">Pedindo para os seus amigos pesquisarem o nome da sua lista, data de quando acontecerá o evento ou pelo código fornecido pelo site ao criar a lista. </li>
+            </ul>
 
-                        <div class="col-sm-12">
-                            <p>Você pode encontrar todas essas informações na nossa plataforma, basta realizar o Login e a acessar o menu "Minhas Listas".</p>
-                        </div>
-
-                        <div class="col-sm-12">
-                            <h2 class="subPerguntas">Como encontrar uma lista?</h2>
-                            <p>basta acessar a página “Procurar Lista”, encontrada na página inical do nosso site, e pesquise pelo nome da lista, nome dos organizadores, data do evento ou código da lista. </p>
-
-                            <h2 class="subPerguntas">O que fazer caso ocorra o esquecimento da senha da minha conta? </h2>
-                            <p>Para redifinir sua senha, na página deverá de  “Login”, clicar em “Esqueci minha senha”. Logo aopós, deverá informar o email cadastrado para que possamos enviar um link para fazer a alteração de sua Nova Senha. </p>
-
-                        </div>
-
-
-                        
-                    </div>      
-                </div>
-        </section>
+            <label class="respostas">Você pode encontrar todas essas informações na nossa plataforma, basta realizar o Login e a acessar o menu "Minhas Listas".</label><br><br>
         
-    </div>           
-</section>
+        <h2 id="subPerguntas">Como encontrar uma lista?</h2>
+            
+            <label class="respostas">basta acessar a página “Procurar Lista”, encontrada na página inical do nosso site, e pesquise pelo nome da lista, nome dos organizadores, data do evento ou código da lista. </label><br><br>
 
+        <h2 id="subPerguntas">O que fazer caso ocorra o esquecimento da senha da minha conta? </h2>
 
-<footer>            
+            <label class="respostas">Para redifinir sua senha, na página deverá de  “Login”, clicar em “Esqueci minha senha”. Logo aopós, deverá informar o email cadastrado para que possamos enviar um link para fazer a alteração de sua Nova Senha. </label>
+            
+
+    </section>
+
+    <footer>            
   <div class="container">
     <a href="/" class="titulo">Presentei.com</a> 
   </div>
 </footer>
+</section>
+
+
+
+
 
     
 

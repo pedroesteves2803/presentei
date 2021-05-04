@@ -1,11 +1,13 @@
-const abrirLogin = document.querySelector("#abr")
+const buttonSearch = document.querySelector(".abrir")
 const modal = document.querySelector("#modal")
-const fecharLogin = document.querySelector("#fechar") 
+const close = document.querySelector("#fechar")
 
-abrirLogin.addEventListener("click", () =>{
-    modal.classList.romove("hide")
+buttonSearch.addEventListener("click", () => {
+    modal.classList.remove("hide")
 })
 
-fecharLogin.addEventListener("click", () =>{
+close.addEventListener("click", () => {
     modal.classList.add("hide")
 })
+
+   

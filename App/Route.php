@@ -31,12 +31,6 @@ class Route extends Bootstrap {
 			'controller' => 'indexController',
 			'action' => 'login'
 		);
-
-		$routes['perguntasFrequentes'] = array(
-			'route' => '/perguntasFrequentes',
-			'controller' => 'indexController',
-			'action' => 'perguntasFrequentes'
-		);
 		
 		$routes['logar'] = array(
 			'route' => '/logar',
@@ -79,26 +73,45 @@ class Route extends Bootstrap {
 			'controller' => 'AppController',
 			'action' => 'atualizarSenhaUsuario'
 		);
+		
+		$routes['perguntasFrequentes'] = array(
+			'route' => '/perguntasFrequentes',
+			'controller' => 'indexController',
+			'action' => 'perguntasFrequentes'
+		);
+
+		$routes['criarLista'] = array(
+			'route' => '/criarLista',
+			'controller' => 'indexController',
+			'action' => 'criarLista'
+		);
+
+		$routes['procurarLista'] = array(
+			'route' => '/procurarLista',
+			'controller' => 'indexController',
+			'action' => 'procurarLista'
+		);
 
 		$routes['escolherLista'] = array(
 			'route' => '/escolherLista',
 			'controller' => 'AppController',
 			'action' => 'escolherLista'
 		);
-		
+
 		$routes['criarListaCasamento'] = array(
 			'route' => '/criarListaCasamento',
 			'controller' => 'AppController',
 			'action' => 'criarListaCasamento'
 		);
 
-		$routes['inserirLista'] = array(
-			'route' => '/inserirLista',
+		$routes['salvarListas'] = array(
+			'route' => '/salvarListas',
 			'controller' => 'AppController',
-			'action' => 'inserirLista'
+			'action' => 'salvarListas'
 		);
-		
 
+		
+		
 
 		$this->setRoutes($routes);
 	}

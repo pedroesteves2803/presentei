@@ -14,6 +14,4 @@ function mostrarSenha(){
         img.setAttribute('src', 'img/senha/olhoFechado.svg');
     }
 
-} 
-
-
+}

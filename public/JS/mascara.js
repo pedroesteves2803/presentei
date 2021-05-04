@@ -61,20 +61,3 @@
             if(cpf.value.length == 11)
                 cpf.value = cpf.value + '-';  // Quando o campo já estiver 9 digitos, o script irá inserir um traço separando entre eles.
     }
-
-    function previewImagem(){
-      var imagem = document.querySelector('input[name=arquivo]').files[0];
-      var preview = document.querySelector('.img');
-      
-      var reader = new FileReader();
-      
-      reader.onloadend = function () {
-          preview.src = reader.result;
-      }
-      
-      if(imagem){
-          reader.readAsDataURL(imagem);
-      }else{
-          preview.src = "";
-      }
-  }

@@ -1,37 +1,36 @@
 <section class="banner-lista" id="home">
     <div class="cabecalho-home-lista">
-        <header> <!--inicio header-->
-                <nav class="navbar navbar-expand-md navbar-light navbar-transparente"> <!--inicio nav-->
-                    <div class="container"> <!--inicio container-->
-                        <a href="/"><img class="logo" src="img/logo/logoPngSf.png"></a>
+    <header> <!--inicio header-->
+                    <nav class="navbar navbar-expand-md navbar-light navbar-transparente"> <!--inicio nav-->
+                        <div class="container"> <!--inicio container-->
+                            <a href="/logado"><img class="logo" src="img/logo/logoPngSf.png"></a>
 
-                        <button class="navbar-toggler" data-toggle="collapse" data-target="#nav-principal">  <!--inicio button-->
-                        <i class="fas fa-bars text-white"></i>
-                        </button> <!--final button-->
 
-                        <div class="collapse navbar-collapse" id="nav-principal"> <!-- inicio div collapse-->
+                            <button class="navbar-toggler" data-toggle="collapse" data-target="#nav-principal">  <!--inicio button-->
+                            <i class="fas fa-bars text-white"></i>
+                            </button> <!--final button-->
 
-                        <ul class="navbar-nav ml-auto"> <!--inicio ul-->
-                            <li class="nav-item">
-                            <a href="/" class="nav-link">Login</a>
-                            </li>
-                            <li class="nav-item">
-                            <a href="/cadastro" class="nav-link">Cadastro</a>
-                            </li>
-                            <li class="nav-item">
-                            <a href="/perguntasFrequentes" class="nav-link">Perguntas Frequentes</a>
-                            </li>
-                        </ul> <!--final ul-->
+                            <div class="collapse navbar-collapse" id="nav-principal"> <!-- inicio div collapse-->
 
-                        </div> <!--final div collapse-->
+                            <ul class="navbar-nav ml-auto"> <!--inicio ul-->                            
+                                <li class="nav-item">
+                                <a href="/minhaConta" class="nav-link"><?= $this->view->nome?></a>
+                                </li>
+                                <li class="nav-item">
+                                <a href="/escolherLista" class="nav-link">Minha lista</a>
+                                </li>
+                                <li class="nav-item">
+                                <a href="/sair" class="nav-link">Sair</a>
+                                </li>
+                            </ul> <!--final ul-->
 
-                    </div> <!--final container-->
+                            </div> <!--final div collapse-->
 
-                </nav> <!--final nav-->
+                        </div> <!--final container-->
 
-        </header> <!--final header-->
+                    </nav> <!--final nav-->
 
-<!-- //casamento -->
+            </header> <!--final header-->
                 
         <section class="container criacaoLista">
 
@@ -40,36 +39,36 @@
                     <div class="form-row divCustom">
                         <div class="form-group col-md-6">
                             <label for="nome">Nome da lista</label>
-                            <input type="text" class="form-control " id="nome" name="nome" placeholder="Nome da sua lista">
+                            <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome da sua lista">
                             <p>O título da sua lista ajuda os convidados a encontrarem sua lista depois. Seja criativo, mas pense como as pessoas vão digitar na busca, caso não tenham o seu link único.</p>
                         </div>
 
                         <div class="form-group col-md-6">
                             <label for="Senha">Senha da lista</label>
-                            <input type="password" class="form-control " name="senhaLista" placeholder="Senha da sua lista">
+                            <input type="password" class="form-control" id="senha" name="senha" placeholder="Senha da sua lista">
                             <p>A senha da sua lista ajuda a na se gurança da sua lista. Seja criativo, mas pense como as pessoas vão digitar no login, caso não tenham o sa sua senha única.</p>
                         </div>
 
                         <div class="form-group col-md-6">
                             <label for="data">Data de quando acontecerá o evento</label>
-                            <input type="date" class="form-control " name="dataLista" placeholder="DD/MM/AAAA" size="10">
+                            <input type="date" class="form-control" id="data" name="data" placeholder="DD/MM/AAAA" size="10">
                            <p>Se você for fazer algum evento, nos informe a data e local para facilitar que seus<br> convidados encontrem sua lista.</p>
                         </div>
 
                         <div class="form-group col-md-6">
                             <label for="local">Local aonde acontecerá o evento</label>
-                            <input type="text" class="form-control " name="localLista" placeholder="Endereço, número" size="10">
+                            <input type="text" class="form-control" id="local" name="local" placeholder="Endereço, número" size="10">
                         </div>
 
                         <div class="form-group col-md-6">
                             <label for="texto">Texto para convidado</label>
-                            <textarea type="text" class="form-control " name="local" maxlength="500"></textarea>
+                            <textarea type="text" class="form-control" id="texto" name="texto" maxlength="500"></textarea>
                             <p>Informe o texto que será mostrado para os convidados, limite de 500 caracteres</p>
                         </div>
 
                         <div class="form-group col-md-6">
                             <label for="img">Imagem</label>
-                            <input name="arquivo" class="form-control" type="file" onchange="previewImagem()">
+                            <input type="file" name="arquivo" class="form-control" onchange="previewImagem()">
                             <p>A imagem deve estar nos formatos PNG, JPG ou JPEG.</p>
                         </div>
 
@@ -87,7 +86,17 @@
 
                 </form>
 
-                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        </section>
+    </div>  
+    
+    <footer>            
+        <div class="container">
+            <a href="/" class="titulo">Presentei.com</a> 
+        </div>
+    </footer>
+</section>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
                 <script>
                         function previewImagem(){
@@ -107,17 +116,6 @@
                             }
                         }
                 </script>
-
-
-        </section>
-    </div>  
-    
-    <footer>            
-        <div class="container">
-            <a href="/" class="titulo">Presentei.com</a> 
-        </div>
-    </footer>
-</section>
 
 
 
