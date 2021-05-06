@@ -43,11 +43,11 @@
                             <p>O título da sua lista ajuda os convidados a encontrarem sua lista depois. Seja criativo, mas pense como as pessoas vão digitar na busca, caso não tenham o seu link único.</p>
                         </div>
 
-                        <div class="form-group col-md-6">
+                        <!-- <div class="form-group col-md-6">
                             <label for="Senha">Senha da lista</label>
                             <input type="password" class="form-control" id="senha" name="senha" placeholder="Senha da sua lista">
                             <p>A senha da sua lista ajuda a na se gurança da sua lista. Seja criativo, mas pense como as pessoas vão digitar no login, caso não tenham o sa sua senha única.</p>
-                        </div>
+                        </div> -->
 
                         <div class="form-group col-md-6">
                             <label for="data">Data de quando acontecerá o evento</label>
@@ -68,7 +68,7 @@
 
                         <div class="form-group col-md-6">
                             <label for="img">Imagem</label>
-                            <input type="file" name="arquivo" class="form-control" onchange="previewImagem()">
+                            <input type="file" name="arq" class="form-control" onchange="previewImagem()">
                             <p>A imagem deve estar nos formatos PNG, JPG ou JPEG.</p>
                         </div>
 
@@ -100,7 +100,7 @@
 
                 <script>
                         function previewImagem(){
-                            var imagem = document.querySelector('input[name=arquivo]').files[0];
+                            var imagem = document.querySelector('input[name=arq]').files[0];
                             var preview = document.querySelector('.img');
                             
                             var reader = new FileReader();

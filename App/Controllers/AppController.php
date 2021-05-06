@@ -142,26 +142,38 @@ class AppController extends Action {
 		$this->view->nome = $_SESSION['nome'];
 
 		$lista->__set('nome', $_POST['nome']);
-		$lista->__set('senha', $_POST['senha']);
 		$lista->__set('texto', $_POST['texto']);
 		$lista->__set('data', $_POST['data']);
 		$lista->__set('local', $_POST['local']);
-		$lista->__set('arquivo', $_FILES['arquivo']['name']); 
+		$lista->__set('arquivo', isset($_POST['arq']) ? $_POST['arq'] : '');
+		$lista->__set('id', $_SESSION['id']);
+
+		$nome = $lista->__get('nome');
+		$texto = $lista->__get('texto');
+		$data = $lista->__get('data');
+		$local = $lista->__get('local');
+		$arq = $lista->__get('arquivo');
+		$id = $lista->__get('id');
 
 
-		$this->view->usuario = array(
-			'nomeLista' => $_POST['nome'],
-			'senhaLista' => $_POST['senha'],
-			'dataLista' => $_POST['data'],
-			'localLista' => $_POST['local'],
-			'texto' => $_POST['texto'],
-			'arquivo' => $_FILES['arquivo']['name']
+
+		echo '---'. $nome . '<br>---'. $texto . '<br>---'. $data . '<br>---'. $local . '<br>---'. $arq . '<br>---'. $id;
+
+		$this->view->lista = array(
+			'nome' =>  $lista->__get('nome'),
+			'data' =>$lista->__get('data'),
+			'local' => $local = $lista->__get('local'),
+			'texto' => $lista->__get('texto'),
+			'arquivo' =>$lista->__get('arquivo'),
+			'id' => $_SESSION['id']
 		);
 		
-		if(empty($nome) and empty($data) and  empty($local)){
+		if($lista->__get('nome') and $lista->__get('data') and  $lista->__get('local')){
+			
+			echo '<br> bora <br>';
 			$this->view->camposCrt = true;
-			//Pasta onde o arquivo vai ser salvo
-			$_UP['pasta'] = 'img/imgfotosListas/';
+			// Pasta onde o arquivo vai ser salvo
+			$_UP['pasta'] = '../public/img/fotosListas/';
 		
 			//Tamanho máximo do arquivo em Bytes
 			$_UP['tamanho'] = 1024*1024*100; //5mb
@@ -180,30 +192,43 @@ class AppController extends Action {
 			$_UP['erros'][4] = 'Não foi feito o upload do arquivo';
 
 			//Faz a verificação do tamanho do arquivo
-			if ($_UP['tamanho'] < $_FILES['arquivo']['size']){
-				$this->view->tamanhosIncorreto = true;			
-			}
-
-		//O arquivo passou em todas as verificações, hora de tentar move-lo para a pasta foto
-			else{
+			if ($_UP['tamanho'] < isset($_FILES['arq']['size']) ? $_POST['arq']['size'] : ''){
+				$this->view->tamanhosIncorreto = true;
+				echo ' <br> erro';		
+			}					
+			else{ //O arquivo passou em todas as verificações, hora de tentar move-lo para a pasta foto
 			//Primeiro verifica se deve trocar o nome do arquivo
 				if($_UP['renomeia'] == true){
 					//Cria um nome baseado no UNIX TIMESTAMP atual e com extensão .jpg
 					$nome_final = time().'.jpg';
+					$lista->__set('img', $nome_final);
+
+					echo '<br> renomeou';		
+
 				}else{
 					//mantem o nome original do arquivo
-					$nome_final = $_FILES['arquivo']['name'];
+					$nome_final = isset($_POST['arq']) ? $_POST['arq'] : '';
+					$lista->__set('img', $nome_final);
+					echo $_UP['pasta'] .  $nome_final . '<br> manteu';
+					// $lista->inserirLista();
+					// echo '<br> foi';
+					// $this->render('criarListaCasamento');
+					
 				}
-				//Verificar se é possivel mover o arquivo para a pasta escolhida
-				if(move_uploaded_file($_FILES['arquivo']['tmp_name'], $_UP['pasta']. $nome_final)){
-					//Upload efetuado com sucesso, exibe a mensagem
+
+				// Verificar se é possivel mover o arquivo para a pasta escolhida
+				if(move_uploaded_file($_POST['arq'], $_UP['pasta']. $nome_final)){
+					// Upload efetuado com sucesso, exibe a mensagem
 					$this->view->inserido = true;
 					
 					$lista->inserirLista();
+					echo '<br> foi';
 					$this->render('criarListaCasamento');
 								
 						
 				}else{
+
+					echo '<br> foi não';
 
 					$this->view->inserido = false;			
 
@@ -211,6 +236,9 @@ class AppController extends Action {
 			}		
 			
 
+		}
+		else{
+			echo 'erro total';
 		}
 
 		$this->render('criarListaCasamento');

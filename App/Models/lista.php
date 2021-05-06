@@ -7,7 +7,7 @@ use MF\Model\Model;
 class Lista extends Model {
     private $id;
     private $nome;
-    private $senha;
+    private $img;
     private $data;
     private $texto;
     private $local;
@@ -26,12 +26,12 @@ class Lista extends Model {
 
     public function inserirLista() {
 
-        $query = "insert into tb_criarlista(nome_lista, senha_lista, data_lista, local_lista, descricao_lista, id_usuario)
-        values(:nome, md5(:senha), :data, :local, :texto, :id)";
+        $query = "insert into tb_criarlista(nome_lista, data_lista, local_lista, descricao_lista, img_lista, id_usuario)
+        values(:nome, :data, :local, :texto, :img, :id)";
 
         $stmt = $this->db->prepare($query);
         $stmt->bindValue(':nome', $this->__get('nome'));
-        $stmt->bindValue(':senha', $this->__get('senha'));
+        $stmt->bindValue(':img', $this->__get('img'));
         $stmt->bindValue(':data', $this->__get('data'));
         $stmt->bindValue(':local', $this->__get('local'));
         $stmt->bindValue(':texto', $this->__get('texto'));
